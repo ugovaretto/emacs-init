@@ -14,12 +14,12 @@
 (eval-when-compile
     (require 'use-package))
 
-;;(use-package evil :ensure t)
 (use-package helm :ensure t)
 (use-package magit :ensure t)
 (use-package powerline :ensure t)
 (use-package wrap-region :ensure t)
 (use-package markdown-mode :ensure t)
+(use-package flycheck :ensure t)
 (use-package lsp-mode :commands lsp :ensure t)
 (use-package lsp-ui :commands lsp-ui-mode :ensure t)
 (use-package company-lsp
@@ -43,14 +43,12 @@
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 (menu-bar-mode -1)  
-;;(use-package evil-tabs :ensure t)
-
-;;(require 'evil)
-;;(evil-mode t)
-;;(global-evil-tabs-mode t)
-;;(powerline-center-color-theme)
+(setq c-default-style "stroustrup")
+(global-column-enforce-mode 1)
 (require 'helm)
 (helm-mode t)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -59,7 +57,7 @@
  '(custom-enabled-themes (quote (manoj-dark)))
  '(package-selected-packages
    (quote
-    (yaml-mode ccls wrap-region markdown-mode use-package sublime-themes spacemacs-theme powerline-evil magit helm evil-tabs))))
+    (column-enforce-mode yaml-mode ccls wrap-region markdown-mode use-package sublime-themes spacemacs-theme powerline-evil magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
