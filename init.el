@@ -39,6 +39,9 @@
   :config
   (wrap-region-add-wrapper "`" "`")
   (wrap-region-add-wrapper "_" "_"))
+(use-package column-enforce-mode :ensure t)
+
+
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
